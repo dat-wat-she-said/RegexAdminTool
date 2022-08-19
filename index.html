@@ -7,7 +7,20 @@
         <input type="text" id="in" placeholder="html">
     </div>
     <div>
-        <button id="translate">translate</button>
+        <select name="target-country" id="target-country">
+            <option value="none" selected disabled hidden>Select an Option</option>
+            <option value="nordic">EN to NORDIC</option>
+            <option value="gr">EN TO GR</option>
+            <option value="uk">EN TO UK</option>
+            <option value="fr">EN TO FR</option>
+            <option value="it">EN TO IT</option>
+            <option value="de">EN TO DE</option>
+            <option value="es">EN TO ES</option>
+            <option value="pl">EN TO PL</option>  
+        </select>
+    </div>
+    <div>
+        <button id="translate" disabled>translate</button>
     </div>
     <div>
         <input type="text" id="out">
