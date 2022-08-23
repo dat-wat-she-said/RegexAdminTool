@@ -11,11 +11,11 @@ let FR_DOMAIN = "fr.creative.com";
 let PL_DOMAIN = "pl.creative.com";
 // DOLLAR
 let EN_DOLLAR_REGEX = new RegExp("(&euro;|€)(\\w*)[.]?(\\w*)","g");
-let EN_TO_UK_DOLLAR_REGEX = new RegExp('&#163;$2.$3');
-let EN_TO_GR_DOLLAR_REGEX = new RegExp("$2,$3$1");
-let EN_TO_IT_DOLLAR_REGEX = new RegExp("$1$2,$3");
-let EN_TO_ES_DE_FR_DOLLAR_REGEX = new RegExp("$2,$3$1");
-let EN_TO_PL_DOLLAR_REGEX = new RegExp("$2$3,00zł");
+let EN_TO_UK_DOLLAR = '&#163;$2.$3';
+let EN_TO_GR_DOLLAR = "$2,$3$1";
+let EN_TO_IT_DOLLAR = "$1$2,$3";
+let EN_TO_ES_DE_FR_DOLLAR = "$2,$3$1";
+let EN_TO_PL_DOLLAR = "$2$3,00zł";
 // FREE SHIPPING
 let EN_SHIP_REGEX = new RegExp("FREE SHIPPING","ig");
 let EN_TO_ES_SHIP = "ENV&Iacute;O GRATU&Iacute;TO";
@@ -53,11 +53,11 @@ let EN_TO_FR_NEW = "NOUVEAU";
 let EN_TO_PL_NEW = "NOWOŚĆ";
 // FREE WORTH
 let EN_FREE_WORTH_REGEX = new RegExp("FREE(.*?)worth","ig");
-let EN_TO_ES_FREE_WORTH_REGEX = new RegExp("GRATIS el$1valorado en");
-let EN_TO_IT_FREE_WORTH_REGEX = new RegExp("GRATIS il$1dal valore di");
-let EN_TO_DE_FREE_WORTH_REGEX = new RegExp("KOSTENLOSES$1im Wert von");
-let EN_TO_FR_FREE_WORTH_REGEX = new RegExp("GRATUIT$1d&rsquo;une valeur de");
-let EN_TO_PL_FREE_WORTH_REGEX = new RegExp("DARMOWY$1wart");
+let EN_TO_ES_FREE_WORTH = "GRATIS el$1valorado en";
+let EN_TO_IT_FREE_WORTH = "GRATIS il$1dal valore di";
+let EN_TO_DE_FREE_WORTH = "KOSTENLOSES$1im Wert von";
+let EN_TO_FR_FREE_WORTH = "GRATUIT$1d&rsquo;une valeur de";
+let EN_TO_PL_FREE_WORTH = "DARMOWY$1wart";
 // FREE
 let EN_FREE_REGEX = new RegExp("FREE","ig");
 let EN_TO_ES_FREE = "GRATUITO";
@@ -67,11 +67,11 @@ let EN_TO_FR_FREE = "GRATUIT";
 let EN_TO_PL_FREE = "BEZPŁATNE";
 // PROMO CODE
 let EN_PROMO_CODE_REGEX = new RegExp("(/help/)ordering(.*?)#i-have-a-promo-code-how-do-i-redeem","ig");
-let EN_TO_ES_PROMO_CODE_REGEX =  new RegExp("$1pedidos$2#tengo-un-c-digo-de-promoci-n-c-mo-lo");
-let EN_TO_IT_PROMO_CODE_REGEX =  new RegExp("$1ordine$2#ho-un-codice-promozionale-come-posso");
-let EN_TO_DE_PROMO_CODE_REGEX =  new RegExp("$1bestellung$2#ich-habe-einen-aktionscode-wie-l-se-ich");
-let EN_TO_FR_PROMO_CODE_REGEX =  new RegExp("$1commande$2#j-39-ai-un-code-promo-comment-puis-je");
-let EN_TO_PL_PROMO_CODE_REGEX =  new RegExp("$1ordering$2#i-have-a-promo-code-how-do-i-redeem")
+let EN_TO_ES_PROMO_CODE =  "$1pedidos$2#tengo-un-c-digo-de-promoci-n-c-mo-lo";
+let EN_TO_IT_PROMO_CODE =  "$1ordine$2#ho-un-codice-promozionale-come-posso";
+let EN_TO_DE_PROMO_CODE = "$1bestellung$2#ich-habe-einen-aktionscode-wie-l-se-ich";
+let EN_TO_FR_PROMO_CODE =  "$1commande$2#j-39-ai-un-code-promo-comment-puis-je";
+let EN_TO_PL_PROMO_CODE =  "$1ordering$2#i-have-a-promo-code-how-do-i-redeem";
 
 // -------function definitions-------
 // switch case for selection to function
@@ -108,8 +108,7 @@ function en_to_uk(text_input) {
     var en_domain_regex = new RegExp(EN_DOMAIN,"ig"); //flags i is for any case and g is for global search
     var result = text_input.replace(en_domain_regex,UK_DOMAIN);
     //dollar
-    console.log(EN_TO_UK_DOLLAR_REGEX);
-    result = result.replace(EN_DOLLAR_REGEX,EN_TO_UK_DOLLAR_REGEX);
+    result = result.replace(EN_DOLLAR_REGEX,EN_TO_UK_DOLLAR);
     //free shipping
     //shopnow, buynow or both tgt
     //learn more
