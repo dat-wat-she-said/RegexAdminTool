@@ -1,6 +1,6 @@
 // -------global definitions------- 
 // DOMAIN
-let EN_DOMAIN = "en.creative.com";
+let EN_DOMAIN_REGEX = new RegExp("en.creative.com","ig"); //i for case and g is for global search
 let UK_DOMAIN = "uk.creative.com";
 let GR_DOMAIN = "gr.creative.com";
 let NORDIC_DOMAIN = "nordic.creative.com";
@@ -45,7 +45,7 @@ let EN_TO_DE_LEARN_MORE = "ERFAHREN SIE MEHR";
 let EN_TO_FR_LEARN_MORE = "EN SAVOIR PLUS";
 let EN_TO_PL_LEARN_MORE = "DOWIEDZ SIĘ WIĘCEJ";
 // NEW
-let EN_NEW_REGEX = new RegExp("NEW","ig");
+let EN_NEW_REGEX = new RegExp("NEW$","ig");
 let EN_TO_ES_NEW = "NUEVO";
 let EN_TO_IT_NEW = "NUOVO";
 let EN_TO_DE_NEW = "NEU";
@@ -59,7 +59,7 @@ let EN_TO_DE_FREE_WORTH = "KOSTENLOSES$1im Wert von";
 let EN_TO_FR_FREE_WORTH = "GRATUIT$1d&rsquo;une valeur de";
 let EN_TO_PL_FREE_WORTH = "DARMOWY$1wart";
 // FREE
-let EN_FREE_REGEX = new RegExp("FREE","ig");
+let EN_FREE_REGEX = new RegExp("FREE$","ig");
 let EN_TO_ES_FREE = "GRATUITO";
 let EN_TO_IT_FREE = "GRATUITO";
 let EN_TO_DE_FREE = "KOSTENLOS";
@@ -104,9 +104,8 @@ function translate(text_input, selection_input){
 
 // translate en to uk
 function en_to_uk(text_input) { 
-    //domain
-    var en_domain_regex = new RegExp(EN_DOMAIN,"ig"); //flags i is for any case and g is for global search
-    var result = text_input.replace(en_domain_regex,UK_DOMAIN);
+    //domain 
+    var result = text_input.replace(EN_DOMAIN_REGEX,UK_DOMAIN); 
     //dollar
     result = result.replace(EN_DOLLAR_REGEX,EN_TO_UK_DOLLAR);
     //free shipping
@@ -118,10 +117,148 @@ function en_to_uk(text_input) {
     //promocode
     return result;
 }
-
+// translate en to gr
+function en_to_gr(text_input) { 
+    //domain
+    var result = text_input.replace(EN_DOMAIN_REGEX,GR_DOMAIN);
+    //dollar
+    result = result.replace(EN_DOLLAR_REGEX,EN_TO_GR_DOLLAR);
+    //free shipping
+    //shopnow, buynow or both tgt
+    //learn more
+    //new
+    //free worth..
+    //free
+    //promocode
+    return result;
+}
+// translate en to gr
+function en_to_nordic(text_input) { 
+    //domain
+    var result = text_input.replace(EN_DOMAIN_REGEX,NORDIC_DOMAIN);
+    //dollar
+    //free shipping
+    //shopnow, buynow or both tgt
+    //learn more
+    //new
+    //free worth..
+    //free
+    //promocode
+    return result;
+}
+// translate en to it
+function en_to_it(text_input) { 
+    //domain
+    var result = text_input.replace(EN_DOMAIN_REGEX,IT_DOMAIN);
+    //dollar
+    result = result.replace(EN_DOLLAR_REGEX,EN_TO_IT_DOLLAR);
+    //free shipping
+    result = result.replace(EN_SHIP_REGEX,EN_TO_IT_SHIP);
+    //shopnow, buynow or both tgt
+    result = result.replace(EN_SHOP_NOW_BUY_NOW_REGEX,EN_TO_IT_SHOP_NOW_BUY_NOW);
+    //learn more
+    result = result.replace(EN_LEARN_MORE_REGEX,EN_TO_IT_LEARN_MORE);
+    //new
+    result = result.replace(EN_NEW_REGEX,EN_TO_IT_NEW);
+    //free worth..
+    result = result.replace(EN_FREE_WORTH_REGEX,EN_TO_IT_FREE_WORTH);
+    //free
+    result = result.replace(EN_FREE_REGEX,EN_TO_IT_FREE);
+    //promocode
+    result = result.replace(EN_PROMO_CODE_REGEX,EN_TO_IT_PROMO_CODE);
+    return result;
+}
+// translate en to es
+function en_to_es(text_input) { 
+    //domain
+    var result = text_input.replace(EN_DOMAIN_REGEX,ES_DOMAIN);
+    //dollar
+    result = result.replace(EN_DOLLAR_REGEX,EN_TO_ES_DE_FR_DOLLAR);
+    //free shipping
+    result = result.replace(EN_SHIP_REGEX,EN_TO_ES_SHIP);
+    //shopnow, buynow or both tgt
+    result = result.replace(EN_SHOP_NOW_BUY_NOW_REGEX,EN_TO_ES_SHOP_NOW_BUY_NOW);
+    //learn more
+    result = result.replace(EN_LEARN_MORE_REGEX,EN_TO_ES_LEARN_MORE);
+    //new
+    result = result.replace(EN_NEW_REGEX,EN_TO_ES_NEW);
+    //free worth..
+    result = result.replace(EN_FREE_WORTH_REGEX,EN_TO_ES_FREE_WORTH);
+    //free
+    result = result.replace(EN_FREE_REGEX,EN_TO_ES_FREE);
+    //promocode
+    result = result.replace(EN_PROMO_CODE_REGEX,EN_TO_ES_PROMO_CODE);
+    return result;
+}
+function en_to_de(text_input) { 
+    //domain
+    var result = text_input.replace(EN_DOMAIN_REGEX,DE_DOMAIN);
+    //dollar
+    result = result.replace(EN_DOLLAR_REGEX,EN_TO_ES_DE_FR_DOLLAR);
+    //free shipping
+    result = result.replace(EN_SHIP_REGEX,EN_TO_DE_SHIP);
+    //shopnow, buynow or both tgt
+    result = result.replace(EN_SHOP_NOW_REGEX,EN_TO_DE_SHOP_NOW);
+    result = result.replace(EN_BUY_NOW_REGEX,EN_TO_DE_BUY_NOW);
+    //learn more
+    result = result.replace(EN_LEARN_MORE_REGEX,EN_TO_DE_LEARN_MORE);
+    //new
+    result = result.replace(EN_NEW_REGEX,EN_TO_DE_NEW);
+    //free worth..
+    result = result.replace(EN_FREE_WORTH_REGEX,EN_TO_DE_FREE_WORTH);
+    //free
+    result = result.replace(EN_FREE_REGEX,EN_TO_DE_FREE);
+    //promocode
+    result = result.replace(EN_PROMO_CODE_REGEX,EN_TO_DE_PROMO_CODE);
+    return result;
+}
+function en_to_fr(text_input) { 
+    //domain
+    var result = text_input.replace(EN_DOMAIN_REGEX,FR_DOMAIN);
+    //dollar
+    result = result.replace(EN_DOLLAR_REGEX,EN_TO_ES_DE_FR_DOLLAR);
+    //free shipping
+    result = result.replace(EN_SHIP_REGEX,EN_TO_FR_SHIP);
+    //shopnow, buynow or both tgt
+    result = result.replace(EN_SHOP_NOW_REGEX,EN_TO_FR_SHOP_NOW);
+    result = result.replace(EN_BUY_NOW_REGEX,EN_TO_FR_BUY_NOW);
+    //learn more
+    result = result.replace(EN_LEARN_MORE_REGEX,EN_TO_FR_LEARN_MORE);
+    //new
+    result = result.replace(EN_NEW_REGEX,EN_TO_FR_NEW);
+    //free worth..
+    result = result.replace(EN_FREE_WORTH_REGEX,EN_TO_FR_FREE_WORTH);
+    //free
+    result = result.replace(EN_FREE_REGEX,EN_TO_FR_FREE);
+    //promocode
+    result = result.replace(EN_PROMO_CODE_REGEX,EN_TO_FR_PROMO_CODE);
+    return result;
+}
+function en_to_pl(text_input) { 
+    //domain
+    var result = text_input.replace(EN_DOMAIN_REGEX,PL_DOMAIN);
+    //dollar
+    result = result.replace(EN_DOLLAR_REGEX,EN_TO_PL_DOLLAR);
+    //free shipping
+    result = result.replace(EN_SHIP_REGEX,EN_TO_PL_SHIP);
+    //shopnow, buynow or both tgt
+    result = result.replace(EN_SHOP_NOW_REGEX,EN_TO_PL_SHOP_NOW);
+    result = result.replace(EN_BUY_NOW_REGEX,EN_TO_PL_BUY_NOW);
+    //learn more
+    result = result.replace(EN_LEARN_MORE_REGEX,EN_TO_PL_LEARN_MORE);
+    //new
+    result = result.replace(EN_NEW_REGEX,EN_TO_PL_NEW);
+    //free worth..
+    result = result.replace(EN_FREE_WORTH_REGEX,EN_TO_PL_FREE_WORTH);
+    //free
+    result = result.replace(EN_FREE_REGEX,EN_TO_PL_FREE);
+    //promocode
+    result = result.replace(EN_PROMO_CODE_REGEX,EN_TO_PL_PROMO_CODE);
+    return result;
+}
 // populates output text field
 function populate(text_output){
-    document.getElementById('out').value = text_output;
+    editor2.setValue(text_output,0);
 }
 
 
@@ -129,7 +266,6 @@ function populate(text_output){
 function manage_translate(){
     var selection = document.getElementById("target-country").value;
     var translation_btn = document.getElementById("translate");
-    console.log(selection);
     if (selection !== 'none'){
         translation_btn.disabled = false;
     }
@@ -145,8 +281,10 @@ selection.addEventListener("change",manage_translate);
 // listen for btn click
 let btn = document.getElementById("translate");
 btn.addEventListener('click', event => { //this is an anonymous function
-    const text_input = document.getElementById("in").value;
-    var text_output = en_to_uk(text_input);
+    // const text_input = document.getElementById("editor");
+    const text_input = editor.getValue();
+    var text_output = translate(text_input,selection.value);
+    console.log(selection.value);
     populate(text_output);
 });
 
