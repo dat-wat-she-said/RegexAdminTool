@@ -1,3 +1,10 @@
+var editor = ace.edit("editor");
+editor.setTheme("ace/theme/cloud9");
+editor.session.setMode("ace/mode/html");
+var editor2 = ace.edit("editor2");
+editor2.setTheme("ace/theme/cloud9");
+editor2.session.setMode("ace/mode/html");
+
 // -------global definitions------- 
 // DOMAIN
 let EN_DOMAIN_REGEX = new RegExp("en.creative.com","ig"); //i for case and g is for global search
