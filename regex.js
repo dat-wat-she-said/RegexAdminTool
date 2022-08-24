@@ -1,3 +1,7 @@
+// Made 2 changes from chee koon and ricson's edition as of 24/8/22
+// 1. change the rules regarding free and new
+// 2. did not include rules that seemed irrelevant
+
 // -------global definitions------- 
 // DOMAIN
 let EN_DOMAIN_REGEX = new RegExp("en.creative.com","ig"); //i for case and g is for global search
@@ -45,7 +49,7 @@ let EN_TO_DE_LEARN_MORE = "ERFAHREN SIE MEHR";
 let EN_TO_FR_LEARN_MORE = "EN SAVOIR PLUS";
 let EN_TO_PL_LEARN_MORE = "DOWIEDZ SIĘ WIĘCEJ";
 // NEW
-let EN_NEW_REGEX = new RegExp("NEW$","ig");
+let EN_NEW_REGEX = new RegExp("NEW\\b","ig");
 let EN_TO_ES_NEW = "NUEVO";
 let EN_TO_IT_NEW = "NUOVO";
 let EN_TO_DE_NEW = "NEU";
@@ -59,7 +63,7 @@ let EN_TO_DE_FREE_WORTH = "KOSTENLOSES$1im Wert von";
 let EN_TO_FR_FREE_WORTH = "GRATUIT$1d&rsquo;une valeur de";
 let EN_TO_PL_FREE_WORTH = "DARMOWY$1wart";
 // FREE
-let EN_FREE_REGEX = new RegExp("FREE$","ig");
+let EN_FREE_REGEX = new RegExp("FREE\\b","ig");
 let EN_TO_ES_FREE = "GRATUITO";
 let EN_TO_IT_FREE = "GRATUITO";
 let EN_TO_DE_FREE = "KOSTENLOS";
@@ -72,6 +76,33 @@ let EN_TO_IT_PROMO_CODE =  "$1ordine$2#ho-un-codice-promozionale-come-posso";
 let EN_TO_DE_PROMO_CODE = "$1bestellung$2#ich-habe-einen-aktionscode-wie-l-se-ich";
 let EN_TO_FR_PROMO_CODE =  "$1commande$2#j-39-ai-un-code-promo-comment-puis-je";
 let EN_TO_PL_PROMO_CODE =  "$1ordering$2#i-have-a-promo-code-how-do-i-redeem";
+// BROWSER VIEW
+let EN_BROWSER_VIEW_REGEX = new RegExp("((alt|title)(.*?))VIEW ALL DEALS\\s*>\\s*","ig");
+let EN_TO_FR_BROWSER_VIEW = "$1VOIR TOUTES LES OFFRES >";
+let EN_TO_IT_BROWSER_VIEW = "$1VISUALIZZA TUTTE LE OFFERTE>";
+let EN_TO_DE_BROWSER_VIEW = "$1ALLE ANGEBOTE ANZEIGEN>";
+let EN_TO_ES_BROWSER_VIEW = "$1VEA TODAS LAS OFERTAS >";
+let EN_TO_PL_BROWSER_VIEW = "$1ZOBACZ CAŁĄ OFERTĘ >";
+// WHITE
+let EN_WHITE_REGEX = new RegExp("\\(WHITE\\)","ig");
+let EN_TO_FR_WHITE = "(BLANC)";
+let EN_TO_DE_WHITE = "(WEIß)";
+let EN_TO_IT_WHITE = "(BIANCO)";
+let EN_TO_ES_WHITE = "(BLANCO)";
+let EN_TO_PL_WHITE = "(BIAŁY)";
+// EUR TO GBP
+function eur_to_gbp(text_input){
+    return text_input.replace(/EUR 79/gi,"GBP 79");
+}
+// UNSTRUCTURED
+function en_to_de_free_male_update(text_input){
+    return text_input.replace(/KOSTENLOSES (Sound Blaster Headset Stand|Creative BT-W2)(?= im Wert von)/,"KOSTENLOSER $1");
+}
+
+//COPYSIGN
+function copysign_encode(text_input){
+    return text_input.replace(/&copy;|Ⓒ|©/,"&#9400;");
+}
 
 // -------function definitions-------
 // switch case for selection to function
@@ -108,13 +139,10 @@ function en_to_uk(text_input) {
     var result = text_input.replace(EN_DOMAIN_REGEX,UK_DOMAIN); 
     //dollar
     result = result.replace(EN_DOLLAR_REGEX,EN_TO_UK_DOLLAR);
-    //free shipping
-    //shopnow, buynow or both tgt
-    //learn more
-    //new
-    //free worth..
-    //free
-    //promocode
+    //copysign
+    result = copysign_encode(result);
+    //eur to gbp
+    result = eur_to_gbp(result);
     return result;
 }
 // translate en to gr
@@ -123,27 +151,12 @@ function en_to_gr(text_input) {
     var result = text_input.replace(EN_DOMAIN_REGEX,GR_DOMAIN);
     //dollar
     result = result.replace(EN_DOLLAR_REGEX,EN_TO_GR_DOLLAR);
-    //free shipping
-    //shopnow, buynow or both tgt
-    //learn more
-    //new
-    //free worth..
-    //free
-    //promocode
     return result;
 }
 // translate en to gr
 function en_to_nordic(text_input) { 
     //domain
     var result = text_input.replace(EN_DOMAIN_REGEX,NORDIC_DOMAIN);
-    //dollar
-    //free shipping
-    //shopnow, buynow or both tgt
-    //learn more
-    //new
-    //free worth..
-    //free
-    //promocode
     return result;
 }
 // translate en to it
@@ -166,6 +179,10 @@ function en_to_it(text_input) {
     result = result.replace(EN_FREE_REGEX,EN_TO_IT_FREE);
     //promocode
     result = result.replace(EN_PROMO_CODE_REGEX,EN_TO_IT_PROMO_CODE);
+    //browser view
+    result = result.replace(EN_BROWSER_VIEW_REGEX,EN_TO_IT_BROWSER_VIEW);
+    //white
+    result = result.replace(EN_WHITE_REGEX,EN_TO_IT_WHITE);
     return result;
 }
 // translate en to es
@@ -188,6 +205,10 @@ function en_to_es(text_input) {
     result = result.replace(EN_FREE_REGEX,EN_TO_ES_FREE);
     //promocode
     result = result.replace(EN_PROMO_CODE_REGEX,EN_TO_ES_PROMO_CODE);
+    //browser view
+    result = result.replace(EN_BROWSER_VIEW_REGEX,EN_TO_ES_BROWSER_VIEW);
+    //white
+    result = result.replace(EN_WHITE_REGEX,EN_TO_ES_WHITE);
     return result;
 }
 function en_to_de(text_input) { 
@@ -208,8 +229,14 @@ function en_to_de(text_input) {
     result = result.replace(EN_FREE_WORTH_REGEX,EN_TO_DE_FREE_WORTH);
     //free
     result = result.replace(EN_FREE_REGEX,EN_TO_DE_FREE);
+    //free male update (custom to de)
+    result = en_to_de_free_male_update(result);
     //promocode
     result = result.replace(EN_PROMO_CODE_REGEX,EN_TO_DE_PROMO_CODE);
+    //browser view
+    result = result.replace(EN_BROWSER_VIEW_REGEX,EN_TO_DE_BROWSER_VIEW);
+    //white
+    result = result.replace(EN_WHITE_REGEX,EN_TO_DE_WHITE);
     return result;
 }
 function en_to_fr(text_input) { 
@@ -232,6 +259,10 @@ function en_to_fr(text_input) {
     result = result.replace(EN_FREE_REGEX,EN_TO_FR_FREE);
     //promocode
     result = result.replace(EN_PROMO_CODE_REGEX,EN_TO_FR_PROMO_CODE);
+    //browser view
+    result = result.replace(EN_BROWSER_VIEW_REGEX,EN_TO_FR_BROWSER_VIEW);
+    //white
+    result = result.replace(EN_WHITE_REGEX,EN_TO_FR_WHITE);
     return result;
 }
 function en_to_pl(text_input) { 
@@ -254,6 +285,10 @@ function en_to_pl(text_input) {
     result = result.replace(EN_FREE_REGEX,EN_TO_PL_FREE);
     //promocode
     result = result.replace(EN_PROMO_CODE_REGEX,EN_TO_PL_PROMO_CODE);
+    //browser view
+    result = result.replace(EN_BROWSER_VIEW_REGEX,EN_TO_PL_BROWSER_VIEW);
+    //white
+    result = result.replace(EN_WHITE_REGEX,EN_TO_PL_WHITE);
     return result;
 }
 // populates output text field
@@ -272,7 +307,7 @@ function manage_translate(){
 }
 
 
-// --------run time behavior--------
+// --------run time code--------
 
 // call manage_translation button
 var selection = document.getElementById("target-country"); 
@@ -284,7 +319,6 @@ btn.addEventListener('click', event => { //this is an anonymous function
     // const text_input = document.getElementById("editor");
     const text_input = editor.getValue();
     var text_output = translate(text_input,selection.value);
-    console.log(selection.value);
     populate(text_output);
 });
 

@@ -18,3 +18,7 @@
     width: 40vw;
     background: white;
 }
+.ace_print-margin {
+    /* remove print margin */
+    display: none;
+}
