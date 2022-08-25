@@ -2,23 +2,25 @@
 /* * {
     outline: 1px solid red;
   } */
+body{
+    height: 100%;
+}
+.middle-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 #editor { 
     position: absolute;
     left: 0px;
     right: 280px;
-    height: 100vh;
+    height: 80vh;
     width: 40vw;
-    background: white;
 }
 #editor2 { 
     position: absolute;
     left: 60vw;
     right: 0px;
-    height: 100vh;
+    height: 80vh;
     width: 40vw;
-    background: white;
-}
-.ace_print-margin {
-    /* remove print margin */
-    display: none;
 }
