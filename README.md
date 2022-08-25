@@ -9,12 +9,13 @@ There is also considerable setup time and need for understanding before users ca
 - able to collect inputs and read them
 - able to read modify and display data correctly
 - error free/error messages covers all possible cases
-
-## Additional Requirements
 - able to run program without dependencies
     - any computer can access and achieve same output with same input
+
+## Additional Requirements
 - user friendly (use json formatter example, and frameworks to create a code editor)
 - lightweight and runs fast
+- linting to show changes made
 
 ## Solution
 Create a translation webapp that takes in HTML input and outputs HTML output according to language which is indicated by parameters set in the webapp. Since Javascript has in-built Regex, we can make use of that to create an environment without dependencies so long as the user is accessing this via the web browser.
