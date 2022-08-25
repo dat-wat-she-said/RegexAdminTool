@@ -90,15 +90,11 @@ const EN_TO_DE_WHITE = "(WEIß)";
 const EN_TO_IT_WHITE = "(BIANCO)";
 const EN_TO_ES_WHITE = "(BLANCO)";
 const EN_TO_PL_WHITE = "(BIAŁY)";
+
 // HEADER
 // HEADER DISPLAY
 const EN_HEADER_DISPLAY_REGEX = new RegExp("If this email does not display correctly(.*)view its full version","ig");
 const EN_TO_IT_HEADER_DISPLAY = "Se non riesci a visualizzare correttamente questa email$1seleziona la versione completa";
-// HEADER FACEBOOK
-const EN_HEADER_FACEBOOK_REGEX = new RegExp("https://www.facebook.com/CreativeLabs","ig");
-const EN_TO_IT_HEADER_FACEBOOK = "https://www.facebook.com/creativeitalia";
-// HEADER INSTAGRAM
-const EN_IT_HEADER_INSTAGRAM_REGEX = new RegExp("https://instagram.com/CreativeLabs","ig");
 // FOOTER
 // FOOTER EXPLORE MORE
 const EN_FOOTER_EXPLORE_MORE_REGEX = new RegExp("EXPLORE MORE","ig");
@@ -115,6 +111,37 @@ const EN_TO_IT_FOOTER_WORK_SOLUTIONS = "SOLUZIONI LAVORATIVE";
 // FOOTER AUDIO ENTHUSIASTS
 const EN_FOOTER_AUDIO_ENTHUSIASTS_REGEX = new RegExp("AUDIO ENTHUSIASTS(?=\b|<)","ig");
 const EN_TO_IT_FOOTER_AUDIO_ENTHUSIASTS = "APPASSIONATI DI AUDIO";
+
+// FOOTER CREATIVE SAVER SHIPPING
+const EN_FOOTER_DELIVERY_METHODS_REGEX = new RegExp("https://en.creative.com/help/delivery#what-are-the-shipping-methods-available","ig");
+const EN_FOOTER_CREATIVE_SAVER_REGEX = new RegExp("Free Creative Saver Shipping on orders over EUR 79.00.","ig");
+const EN_TO_IT_FOOTER_DELIVERY_METHODS = "https://it.creative.com/help/consegna#quali-sono-i-metodi-di-spedizione-disponibili-e-come-posso-usufruire-della-spedizione-gratuita";
+const EN_TO_IT_FOOTER_CREATIVE_SAVER = "Consegna gratuita per ordini di importo superiore a €79,00.";
+// FOOTER COMMUNICATION PARAGRAPH
+const EN_FOOTER_COMMUNICATION_PARA_REGEX = new RegExp("This communication was sent to you as a Creative subscriber.<br>You are subscribed as: {{UserAttribute\\['Email']}}.<br>To ensure delivery of future emails, please add info@mailers.europe.creative.com to your address book.","ig");
+const EN_TO_IT_FOOTER_COMMUNICATION_PARA = "Questa comunicazione ti è stata inviata perché sei iscritto alla newsletter Creative.<br>Il tuo indirizzo di iscrizione è: {{UserAttribute['Email']}}.<br>Per essere sicuro/a di ricevere i nostri messaggi e-mail aggiungi il seguente indirizzo info@mailers.europe.creative.com alla tua rubrica.";
+// FOOTER UNSUB_PRIVACY_CONTACT
+const EN_FOOTER_UNSUB_REGEX = new RegExp("Unsubscribe","ig");
+const EN_FOOTER_PRIVACY_REGEX = new RegExp("Privacy Policy","ig");
+const EN_FOOTER_CONTACT_REGEX = new RegExp("Contact us","ig");
+const EN_TO_IT_FOOTER_UNSUB = "Annulla iscrizione";
+const EN_TO_IT_FOOTER_PRIVACY = "Regole sulla riservatezza";
+const EN_TO_IT_FOOTER_CONTACT = "Contatti";
+// FOOTER COPYRIGHT
+const EN_FOOTER_COPYRIGHT_REGEX = new RegExp("Copyright © 2022. All rights reserved Creative Labs \\(Europe\\) Limited, Reg No: 580841<br>Unit Q2, North Ring Business Park, Santry, Dublin, D09 EV70, Ireland<br>Savings based on price of full retail product.<br>Whilst Creative endeavours to keep the information up-to-date and accurate Creative makes no representations or warranties of any kind, express or implied about the completeness, accuracy, reliability, suitability or availability with respect to the information, products, services or offers contained in this email for any purpose. The price and availability of products, services and offers are country specific and subject to change without prior notice.","ig");
+const EN_TO_IT_FOOTER_COPYRIGHT = "Copyright © 2022. Tutti i diritti riservati a Creative Labs (Europe) Limited, N. reg: 580841<br>Unit Q2, North Ring Business Park, Santry, Dublin, D09 EV70, Ireland.<br>I risparmi sono calcolati in base al prezzo completo del prodotto di vendita.<br>Pur impegnandosi per fornire informazioni precise e aggiornate, Creative non dichiara alcunché né offre alcuna garanzia, espressa o implicita, relativamente alla completezza, accuratezza, affidabilità, idoneità o disponibilità in merito a informazioni, prodotti, servizi o offerte contenuti nel presente messaggio e-mail per alcun motivo. Prezzo e disponibilità dei prodotti, dei servizi e delle offerte variano in base al Paese e sono soggetti a modifiche senza preavviso."
+
+
+// FOOTER IT
+function en_to_it_footer_line_height(text_input) {
+    return text_input.replace(/(<p style="font-size: 10px;font-family: verdana, geneva, sans-serif;">)(?=<a target="_blank" style="font-size: 10px; font-family: verdana, geneva, sans-serif; text-decoration: none; color: #333333;" href="https:\/\/it\.creative\.com\/sxfi\/">SUPER X-FI<\/a>)/,'<p style="font-size: 10px; line-height: 200%; font-family: verdana, geneva, sans-serif;">');
+}
+// HEADER FOOTER FACEBOOK
+const EN_HEADER_FACEBOOK_REGEX = new RegExp("https://www.facebook.com/CreativeLabs","ig");
+const EN_TO_IT_HEADER_FACEBOOK = "https://www.facebook.com/creativeitalia";
+// HEADER FOOTER INSTAGRAM
+const EN_IT_HEADER_INSTAGRAM_REGEX = new RegExp("https://instagram.com/CreativeLabs","ig");
+
 // EUR TO GBP
 function eur_to_gbp(text_input){
     return text_input.replace(/EUR 79/gi,"GBP 79");
@@ -186,8 +213,15 @@ function en_to_nordic(text_input) {
 }
 // translate en to it
 function en_to_it(text_input) { 
+    //footer
+    var result = text_input.replace(EN_FOOTER_CREATIVE_SAVER_REGEX,EN_TO_IT_FOOTER_CREATIVE_SAVER);
+    result = result.replace(EN_FOOTER_COMMUNICATION_PARA_REGEX,EN_TO_IT_FOOTER_COMMUNICATION_PARA);
+    result = result.replace(EN_FOOTER_UNSUB_REGEX,EN_TO_IT_FOOTER_UNSUB);
+    result = result.replace(EN_FOOTER_PRIVACY_REGEX,EN_TO_IT_FOOTER_PRIVACY);
+    result = result.replace(EN_FOOTER_CONTACT_REGEX,EN_TO_IT_FOOTER_CONTACT);
+    result = result.replace(EN_FOOTER_COPYRIGHT_REGEX,EN_TO_IT_FOOTER_COPYRIGHT);
     //domain
-    var result = text_input.replace(EN_DOMAIN_REGEX,IT_DOMAIN);
+    result = result.replace(EN_DOMAIN_REGEX,IT_DOMAIN);
     //dollar
     result = result.replace(EN_DOLLAR_REGEX,EN_TO_IT_DOLLAR);
     //free shipping
@@ -217,6 +251,7 @@ function en_to_it(text_input) {
     result = result.replace(EN_FOOTER_HEADPHONES_REGEX,EN_TO_IT_FOOTER_HEADPHONES);
     result = result.replace(EN_FOOTER_WORK_SOLUTIONS_REGEX,EN_TO_IT_FOOTER_WORK_SOLUTIONS);
     result = result.replace(EN_FOOTER_AUDIO_ENTHUSIASTS_REGEX,EN_TO_IT_FOOTER_AUDIO_ENTHUSIASTS);
+    result = en_to_it_footer_line_height(result);
     return result;
 }
 // translate en to es
