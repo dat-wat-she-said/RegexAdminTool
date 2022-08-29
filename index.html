@@ -16,41 +16,33 @@
         <div class="container">
             <div class="row">
                 <div class="left-section col-sm-5 col-md-5 col-lg-5">
-                    <div id="editor">
-                        function foo(items) {
-                            var x = "All this is syntax highlighted";
-                            return x;
-                        }
-                    </div>
+                    <div id="editor">Enter your input here</div>
                 </div>
                 <div class="middle-section col-sm-2 col-md-2 col-lg-2">
-                    <div class="dropdown">
-                        <select name="target-country" id="target-country">
-                            <option value="none" selected disabled hidden>Select an Option</option>
-                            <option value="nordic">EN TO NORDIC</option>
-                            <option value="gr">EN TO GR</option>
-                            <option value="uk">EN TO UK</option>
-                            <option value="fr">EN TO FR</option>
-                            <option value="it">EN TO IT</option>
-                            <option value="de">EN TO DE</option>
-                            <option value="es">EN TO ES</option>
-                            <option value="pl">EN TO PL</option>  
-                        </select>
+                    <div class="translation-inputs">
+                        <div class="dropdown">
+                            <select name="target-country" id="target-country">
+                                <option value="none" selected disabled hidden>Select an Option</option>
+                                <option value="nordic">EN TO NORDIC</option>
+                                <option value="gr">EN TO GR</option>
+                                <option value="uk">EN TO UK</option>
+                                <option value="fr">EN TO FR</option>
+                                <option value="it">EN TO IT</option>
+                                <option value="de">EN TO DE</option>
+                                <option value="es">EN TO ES</option>
+                                <option value="pl">EN TO PL</option>  
+                            </select>
+                        </div>
+                        <div>
+                            <button class="button button-3" id="translate" role="button" disabled>Translate</button>
+                        </div>
                     </div>
-                    <div class="button">
-                        <button id="translate" disabled>Translate</button>
-                    </div>
-                    <div class="button">
-                        <button id="copy">Copy ></button>
+                    <div>
+                        <button id="copy" class="button button-3" role="button">Copy ></button>
                     </div>
                 </div>
                 <div class="right-section col-sm-5 col-md-5 col-lg-5">
-                    <div id="editor2">
-                        function foo(items) {
-                            var x = "All this is syntax highlighted";
-                            return x;
-                        }
-                    </div>
+                    <div id="editor2">Output delivered here</div>
                 </div>
             </div>
         </div>
