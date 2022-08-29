@@ -96,58 +96,115 @@ const EN_TO_PL_WHITE = "(BIAŁY)";
 const EN_HEADER_DISPLAY_REGEX = new RegExp("If this email does not display correctly(.*)view its full version","ig");
 const EN_TO_IT_HEADER_DISPLAY = "Se non riesci a visualizzare correttamente questa email$1seleziona la versione completa";
 const EN_TO_DE_HEADER_DISPLAY = "Wenn diese E-mail nicht korrekt angezeigt wird$1wechseln Sie die Ansicht zur Vollversion";
+const EN_TO_ES_HEADER_DISPLAY = "Si este e-mail no se muestra correctamente$1vea su versión completa";
+const EN_TO_FR_HEADER_DISPLAY = "Si cet email ne s'affiche pas correctement$1regardez-le dans sa version complète"
+const EN_TO_PL_HEADER_DISPLAY = "Jeśli ta wiadomość nie wyświetla się poprawnie$1wyświetl w pełnej wersji"
 // FOOTER
 // FOOTER EXPLORE MORE
 const EN_FOOTER_EXPLORE_MORE_REGEX = new RegExp("EXPLORE MORE","ig");
 const EN_TO_IT_FOOTER_EXPLORE_MORE = "SCOPRI DI PIÙ SU";
 const EN_TO_DE_FOOTER_EXPLORE_MORE = "MEHR ERFAHREN";
+const EN_TO_ES_FOOTER_EXPLORE_MORE = "EXPLORE MÁS";
+const EN_TO_FR_FOOTER_EXPLORE_MORE = "EN SAVOIR PLUS";
+const EN_TO_PL_FOOTER_EXPLORE_MORE = "DOWIEDZ SIĘ WIĘCEJ";
 // FOOTER SPEAKERS
 const EN_FOOTER_SPEAKERS_REGEX = new RegExp("SPEAKERS(?=\b|<)","ig");
 const EN_TO_IT_FOOTER_SPEAKERS = "ALTOPARLANTI";
 const EN_TO_DE_FOOTER_SPEAKERS = "LAUTSPRECHER";
+const EN_TO_ES_FOOTER_SPEAKERS = "ALTAVOCES";
+const EN_TO_FR_FOOTER_SPEAKERS = "ENCEINTES";
+const EN_TO_PL_FOOTER_SPEAKERS = "GŁOŚNIKI";
 // FOOTER HEADPHONES
 const EN_FOOTER_HEADPHONES_REGEX = new RegExp("HEADPHONES(?=<)(.*?\\|)","ig");
 const EN_TO_IT_FOOTER_HEADPHONES = "CUFFIE$1&nbsp;<br class='esd-mobile-hidden'>";
 const EN_TO_DE_FOOTER_HEADPHONES = "KOPFHÖRER$1&nbsp;<br class='esd-mobile-hidden'>";
+const EN_TO_ES_FOOTER_HEADPHONES = "AURICULARES$1&nbsp;<br class='esd-mobile-hidden'>";
+const EN_TO_FR_FOOTER_HEADPHONES = "CASQUES / ÉCOUTEURS$1&nbsp;<br class='esd-mobile-hidden'>";
+const EN_TO_PL_FOOTER_HEADPHONES = "SŁUCHAWKI$1&nbsp;<br class='esd-mobile-hidden'>";
 // FOOTER WORK SOLUTIONS
 const EN_FOOTER_WORK_SOLUTIONS_REGEX = new RegExp("WORK SOLUTIONS(?=\b|<)","ig");
 const EN_TO_IT_FOOTER_WORK_SOLUTIONS = "SOLUZIONI LAVORATIVE";
 const EN_TO_DE_FOOTER_WORK_SOLUTIONS = "FÜR DIE ARBEIT";
+const EN_TO_ES_FOOTER_WORK_SOLUTIONS = "SOLUCIONES DE TRABAJO";
+const EN_TO_FR_FOOTER_WORK_SOLUTIONS = "SOLUTIONS POUR LE TRAVAIL";
+const EN_TO_PL_FOOTER_WORK_SOLUTIONS = "ROZWIĄZANIA DO PRACY";
 // FOOTER AUDIO ENTHUSIASTS
 const EN_FOOTER_AUDIO_ENTHUSIASTS_REGEX = new RegExp("AUDIO ENTHUSIASTS(?=\b|<)","ig");
 const EN_TO_IT_FOOTER_AUDIO_ENTHUSIASTS = "APPASSIONATI DI AUDIO";
 const EN_TO_DE_FOOTER_AUDIO_ENTHUSIASTS = "AUDIO-ENTHUSIASTEN";
+const EN_TO_ES_FOOTER_AUDIO_ENTHUSIASTS = "ENTUSIASTAS DEL SONIDO";
+const EN_TO_FR_FOOTER_AUDIO_ENTHUSIASTS = "PASSIONNÉS D'AUDIO";
+const EN_TO_PL_FOOTER_AUDIO_ENTHUSIASTS = "ENTUZJAŚCI AUDIO";
 // FOOTER CREATIVE SAVER SHIPPING
 const EN_FOOTER_DELIVERY_METHODS_REGEX = new RegExp("https://en.creative.com/help/delivery#what-are-the-shipping-methods-available","ig");
-const EN_FOOTER_CREATIVE_SAVER_REGEX = new RegExp("Free Creative Saver Shipping on orders over EUR 79.00.","ig");
 const EN_TO_IT_FOOTER_DELIVERY_METHODS = "https://it.creative.com/help/consegna#quali-sono-i-metodi-di-spedizione-disponibili-e-come-posso-usufruire-della-spedizione-gratuita";
 const EN_TO_DE_FOOTER_DELIVERY_METHODS = "https://de.creative.com/help/lieferung#welche-versandmethoden-stehen-zur-auswahl-und-wie-nehme-ich-kostenlosen-versand-in-anspruch";
+const EN_TO_ES_FOOTER_DELIVERY_METHODS = "https://es.creative.com/help/entrega#-cu-les-son-los-m-todos-de-env-o-disponibles-y-c-mo-opto-al-env-o-gratuito"
+const EN_TO_FR_FOOTER_DELIVERY_METHODS = "https://fr.creative.com/help/livraison#quels-sont-les-modes-de-livraison-propos-s-et-comment-b-n-ficier-de-la-livraison-gratuite";
+const EN_TO_PL_FOOTER_DELIVERY_METHODS = "https://pl.creative.com/help/delivery#what-are-the-shipping-methods-available"
+
+const EN_FOOTER_CREATIVE_SAVER_REGEX = new RegExp("Free Creative Saver Shipping on orders over EUR 79.00.","ig");
 const EN_TO_IT_FOOTER_CREATIVE_SAVER = "Consegna gratuita per ordini di importo superiore a €79,00.";
+const EN_TO_DE_FOOTER_CREATIVE_SAVER = "KOSTENLOSE Lieferung ab einem Bestellwert von 79,00€.";
+const EN_TO_ES_FOOTER_CREATIVE_SAVER = "Envío gratuito en pedidos superiores a 79,00€.";
+const EN_TO_FR_FOOTER_CREATIVE_SAVER = "Livraison Creative Saver gratuite pour les commandes d'un montant supérieur à 79,00€.";
+const EN_TO_PL_FOOTER_CREATIVE_SAVER = "Bezpłatna dostawa Creative Saver Shipping przy zamówieniu o wartości powyżej 329,00zł."
 // FOOTER COMMUNICATION PARAGRAPH
 const EN_FOOTER_COMMUNICATION_PARA_REGEX = new RegExp("This communication was sent to you as a Creative subscriber.<br>You are subscribed as: {{UserAttribute\\['Email']}}.<br>To ensure delivery of future emails, please add info@mailers.europe.creative.com to your address book.","ig");
 const EN_TO_IT_FOOTER_COMMUNICATION_PARA = "Questa comunicazione ti è stata inviata perché sei iscritto alla newsletter Creative.<br>Il tuo indirizzo di iscrizione è: {{UserAttribute['Email']}}.<br>Per essere sicuro/a di ricevere i nostri messaggi e-mail aggiungi il seguente indirizzo info@mailers.europe.creative.com alla tua rubrica.";
+const EN_TO_DE_FOOTER_COMMUNICATION_PARA = "Sie erhalten diese Informationen als registrierter Kunde von Creative.<br>Sie sind angemeldet als: {{UserAttribute['Email']}}.<br>Damit unsere E-Mails zuverlässig bei Ihnen ankommen, empfehlen wir Ihnen, die Adresse info@mailers.europe.creative.com in Ihr Adressbuch aufzunehmen."
+const EN_TO_ES_FOOTER_COMMUNICATION_PARA = "Este mensaje ha sido enviado a todos los suscriptores de Creative.<br>Te has suscrito como: {{UserAttribute['Email']}}.<br>Para garantizar que recibes nuestros mensajes, agrega info@mailers.europe.creative.com a tu libreta de direcciones."
+const EN_TO_FR_FOOTER_COMMUNICATION_PARA = "Vous avez reçu ce message en tant qu'abonné Creative.<br>Vous êtes abonné avec l'adresse : {{UserAttribute['Email']}}.<br>Pour vous assurer que votre e-mail est envoyé, veuillez ajouter info@mailers.europe.creative.com à votre carnet d'adresses."
+const EN_TO_PL_FOOTER_COMMUNICATION_PARA = "Otrzymales te wiadomosc, poniewaz jestes subskrybentem Creative.<br>Twój adres subskrypcji: {{UserAttribute['Email']}}.<br>Aby upewnic sie, ze twoja wiadomosc do nas dotrze, dodaj adres info@mailers.europe.creative.com do twojej ksiazki adresowej."
 // FOOTER UNSUB_PRIVACY_CONTACT
-const EN_FOOTER_UNSUB_REGEX = new RegExp("Unsubscribe","ig");
+const EN_FOOTER_UNSUB_REGEX = new RegExp("Unsubscribe","g");
 const EN_FOOTER_PRIVACY_REGEX = new RegExp("Privacy Policy","ig");
 const EN_FOOTER_CONTACT_REGEX = new RegExp("Contact us","ig");
 const EN_TO_IT_FOOTER_UNSUB = "Annulla iscrizione";
 const EN_TO_IT_FOOTER_PRIVACY = "Regole sulla riservatezza";
 const EN_TO_IT_FOOTER_CONTACT = "Contatti";
+const EN_TO_DE_FOOTER_UNSUB = "Abmelden";
+const EN_TO_DE_FOOTER_PRIVACY = "Datenschutzrichtlinien";
+const EN_TO_DE_FOOTER_CONTACT = "Kontakt";
+const EN_TO_ES_FOOTER_UNSUB = "Cancelar suscripción";
+const EN_TO_ES_FOOTER_PRIVACY = "Política de confidencialidad";
+const EN_TO_ES_FOOTER_CONTACT = "Contacto";
+const EN_TO_FR_FOOTER_UNSUB = "Désabonner";
+const EN_TO_FR_FOOTER_PRIVACY = "Règles de confidentialité";
+const EN_TO_FR_FOOTER_CONTACT = "Nous contacter";
+const EN_TO_PL_FOOTER_UNSUB = "Wypisz sie";
+const EN_TO_PL_FOOTER_PRIVACY = "Polityka prywatnosci";
+const EN_TO_PL_FOOTER_CONTACT = "Skontaktuj sie z nami";
 // FOOTER COPYRIGHT
 const EN_FOOTER_COPYRIGHT_REGEX = new RegExp("Copyright © 2022. All rights reserved Creative Labs \\(Europe\\) Limited, Reg No: 580841<br>Unit Q2, North Ring Business Park, Santry, Dublin, D09 EV70, Ireland<br>Savings based on price of full retail product.<br>Whilst Creative endeavours to keep the information up-to-date and accurate Creative makes no representations or warranties of any kind, express or implied about the completeness, accuracy, reliability, suitability or availability with respect to the information, products, services or offers contained in this email for any purpose. The price and availability of products, services and offers are country specific and subject to change without prior notice.","ig");
 const EN_TO_IT_FOOTER_COPYRIGHT = "Copyright © 2022. Tutti i diritti riservati a Creative Labs (Europe) Limited, N. reg: 580841<br>Unit Q2, North Ring Business Park, Santry, Dublin, D09 EV70, Ireland.<br>I risparmi sono calcolati in base al prezzo completo del prodotto di vendita.<br>Pur impegnandosi per fornire informazioni precise e aggiornate, Creative non dichiara alcunché né offre alcuna garanzia, espressa o implicita, relativamente alla completezza, accuratezza, affidabilità, idoneità o disponibilità in merito a informazioni, prodotti, servizi o offerte contenuti nel presente messaggio e-mail per alcun motivo. Prezzo e disponibilità dei prodotti, dei servizi e delle offerte variano in base al Paese e sono soggetti a modifiche senza preavviso."
-
-
-// FOOTER IT
+const EN_TO_DE_FOOTER_COPYRIGHT = "Copyright © 2022. Alle Rechte vorbehalten. Creative Labs (Europe) Limited, Reg No: 580841<br>Unit Q2, North Ring Business Park, Santry, Dublin, D09 EV70, Ireland.<br>Die Nachlässe basieren auf dem Preis für das vollständige Einzelhandelsprodukt.<br>Obwohl Creative sich stets um die Bereitstellung aktueller, korrekter Informationen bemüht, übernimmt Creative keinerlei Haftung oder Garantie, weder ausdrücklich noch stillschweigend, für die Vollständigkeit, Korrektheit, Zuverlässigkeit, Eignung oder Verfügbarkeit der in dieser E-Mail aufgeführten Informationen, Produkte, Dienstleistungen oder Angebote für irgendeinen Zweck. Die Preise und Verfügbarkeit der Produkte, Dienstleistungen und Angebote sind länderspezifisch und Änderungen vorbehalten.";
+const EN_TO_ES_FOOTER_COPYRIGHT = "Copyright © 2022. Todos los derechos reservados Creative Labs (Europe) Limited, n.º de reg.: 580841<br>Unit Q2, North Ring Business Park, Santry, Dublin, D09 EV70, Ireland<br>Ahorro basado en el precio total del producto.<br>Aunque Creative adopta todas las medidas razonables para mantener la precisión y actualidad de la información, Creative no se responsabiliza ni ofrece garantías de ningún tipo, expresas ni implícitas, de la integridad, precisión, fiabilidad, adecuación ni disponibilidad en relación con la información, productos, servicios u ofertas incluidos en este mensaje de correo electrónico en caso alguno. El precio y la disponibilidad de los productos, servicios y ofertas pueden variar en función del país y están sujetos a modificaciones sin previo aviso."
+const EN_TO_FR_FOOTER_COPYRIGHT = "Copyright © 2022. Tous droits réservés Creative Labs (Europe) Limited, Reg No: 580841<br>Unit Q2, North Ring Business Park, Santry, Dublin, D09 EV70, Ireland.<br>Réductions sur la base du prix du produit vendu au détail.<br>Bien que nous nous efforcions de fournir toujours des informations à jour et exactes, Creative exclut toute représentation ou garantie, expresse ou implicite, quant à l'exhaustivité, l'exactitude, la fiabilité, la pertinence ou la disponibilité des informations, produits, services ou offres contenus dans ce courrier électronique pour quelque but que ce soit. Le prix et la disponibilité des produits, des services et des offres sont spécifiques à chaque pays et susceptibles d'être modifiés sans avis préalable."
+const EN_TO_PL_FOOTER_COPYRIGHT = "Copyright © 2022. Wszelkie prawa zastrzezone, Creative Labs (Europe) Ltd, Nr rej.: Ireland 580841<br>Unit Q2, North Ring Business Park, Santry, Dublin, D09 EV70, Ireland.<br>Rabaty obliczone na podstawie pelnej ceny sklepowej produktu.<br>Firma Creative doklada wszelkich staran, aby prezentowane informacje byly aktualne. Firma Creative nie gwarantuje jednak w zaden sposób, jawny badz dorozumiany, kompletnosci, dokladnosci, aktualnosci, przydatnosci lub dostepnosci wzgledem informacji, produktów, uslug i ofert zawartych w niniejszej wiadomosci e-mail. Ceny i dostepnosc produktów, uslug i ofert zaleza od kraju i moga ulec zmianie bez powiadomienia."
+// FOOTER IT DE ES FR PL
 function en_to_it_footer_line_height(text_input) {
     return text_input.replace(/(<p style="font-size: 10px;font-family: verdana, geneva, sans-serif;">)(?=<a target="_blank" style="font-size: 10px; font-family: verdana, geneva, sans-serif; text-decoration: none; color: #333333;" href="https:\/\/it\.creative\.com\/sxfi\/">SUPER X-FI<\/a>)/,'<p style="font-size: 10px; line-height: 200%; font-family: verdana, geneva, sans-serif;">');
+}
+function en_to_de_footer_line_height(text_input) {
+    return text_input.replace(/(<p style="font-size: 10px;font-family: verdana, geneva, sans-serif;">)(?=<a target="_blank" style="font-size: 10px; font-family: verdana, geneva, sans-serif; text-decoration: none; color: #333333;" href="https:\/\/de\.creative\.com\/sxfi\/">SUPER X-FI<\/a>)/,'<p style="font-size: 10px; line-height: 200%; font-family: verdana, geneva, sans-serif;">');
+}
+function en_to_es_footer_line_height(text_input) {
+    return text_input.replace(/(<p style="font-size: 10px;font-family: verdana, geneva, sans-serif;">)(?=<a target="_blank" style="font-size: 10px; font-family: verdana, geneva, sans-serif; text-decoration: none; color: #333333;" href="https:\/\/es\.creative\.com\/sxfi\/">SUPER X-FI<\/a>)/,'<p style="font-size: 10px; line-height: 200%; font-family: verdana, geneva, sans-serif;">');
+}
+function en_to_fr_footer_line_height(text_input) {
+    return text_input.replace(/(<p style="font-size: 10px;font-family: verdana, geneva, sans-serif;">)(?=<a target="_blank" style="font-size: 10px; font-family: verdana, geneva, sans-serif; text-decoration: none; color: #333333;" href="https:\/\/fr\.creative\.com\/sxfi\/">SUPER X-FI<\/a>)/,'<p style="font-size: 10px; line-height: 200%; font-family: verdana, geneva, sans-serif;">');
+}
+function en_to_pl_footer_line_height(text_input) {
+    return text_input.replace(/(<p style="font-size: 10px;font-family: verdana, geneva, sans-serif;">)(?=<a target="_blank" style="font-size: 10px; font-family: verdana, geneva, sans-serif; text-decoration: none; color: #333333;" href="https:\/\/pl\.creative\.com\/sxfi\/">SUPER X-FI<\/a>)/,'<p style="font-size: 10px; line-height: 200%; font-family: verdana, geneva, sans-serif;">');
 }
 // HEADER FOOTER FACEBOOK
 const EN_HEADER_FACEBOOK_REGEX = new RegExp("https://www.facebook.com/CreativeLabs","ig");
 const EN_TO_IT_HEADER_FACEBOOK = "https://www.facebook.com/creativeitalia";
-// HEADER FOOTER INSTAGRAM
-const EN_IT_HEADER_INSTAGRAM_REGEX = new RegExp("https://instagram.com/CreativeLabs","ig");
-
+const EN_TO_DE_HEADER_FACEBOOK = "https://www.facebook.com/CreativeLabsDeutschland";
+const EN_TO_ES_HEADER_FACEBOOK = "https://www.facebook.com/CreativeEspana";
+const EN_TO_FR_HEADER_FACEBOOK = "https://www.facebook.com/CreativeFrance";
+const EN_TO_PL_HEADER_FACEBOOK = "https://www.facebook.com/CreativePolska";
 // EUR TO GBP
 function eur_to_gbp(text_input){
     return text_input.replace(/EUR 79/gi,"GBP 79");
@@ -221,6 +278,7 @@ function en_to_nordic(text_input) {
 function en_to_it(text_input) { 
     //footer
     var result = text_input.replace(EN_FOOTER_CREATIVE_SAVER_REGEX,EN_TO_IT_FOOTER_CREATIVE_SAVER);
+    result = result.replace(EN_FOOTER_DELIVERY_METHODS_REGEX,EN_TO_IT_FOOTER_DELIVERY_METHODS)
     result = result.replace(EN_FOOTER_COMMUNICATION_PARA_REGEX,EN_TO_IT_FOOTER_COMMUNICATION_PARA);
     result = result.replace(EN_FOOTER_UNSUB_REGEX,EN_TO_IT_FOOTER_UNSUB);
     result = result.replace(EN_FOOTER_PRIVACY_REGEX,EN_TO_IT_FOOTER_PRIVACY);
@@ -262,8 +320,16 @@ function en_to_it(text_input) {
 }
 // translate en to es
 function en_to_es(text_input) { 
+    //footer
+    var result = text_input.replace(EN_FOOTER_CREATIVE_SAVER_REGEX,EN_TO_ES_FOOTER_CREATIVE_SAVER);
+    result = result.replace(EN_FOOTER_DELIVERY_METHODS_REGEX,EN_TO_ES_FOOTER_DELIVERY_METHODS)
+    result = result.replace(EN_FOOTER_COMMUNICATION_PARA_REGEX,EN_TO_ES_FOOTER_COMMUNICATION_PARA);
+    result = result.replace(EN_FOOTER_UNSUB_REGEX,EN_TO_ES_FOOTER_UNSUB);
+    result = result.replace(EN_FOOTER_PRIVACY_REGEX,EN_TO_ES_FOOTER_PRIVACY);
+    result = result.replace(EN_FOOTER_CONTACT_REGEX,EN_TO_ES_FOOTER_CONTACT);
+    result = result.replace(EN_FOOTER_COPYRIGHT_REGEX,EN_TO_ES_FOOTER_COPYRIGHT);
     //domain
-    var result = text_input.replace(EN_DOMAIN_REGEX,ES_DOMAIN);
+    result = result.replace(EN_DOMAIN_REGEX,ES_DOMAIN);
     //dollar
     result = result.replace(EN_DOLLAR_REGEX,EN_TO_ES_DE_FR_DOLLAR);
     //free shipping
@@ -284,11 +350,29 @@ function en_to_es(text_input) {
     result = result.replace(EN_BROWSER_VIEW_REGEX,EN_TO_ES_BROWSER_VIEW);
     //white
     result = result.replace(EN_WHITE_REGEX,EN_TO_ES_WHITE);
+    //header
+    result = result.replace(EN_HEADER_DISPLAY_REGEX,EN_TO_ES_HEADER_DISPLAY);
+    result = result.replace(EN_HEADER_FACEBOOK_REGEX,EN_TO_ES_HEADER_FACEBOOK);
+    //footer
+    result = result.replace(EN_FOOTER_EXPLORE_MORE_REGEX,EN_TO_ES_FOOTER_EXPLORE_MORE);
+    result = result.replace(EN_FOOTER_SPEAKERS_REGEX,EN_TO_ES_FOOTER_SPEAKERS);
+    result = result.replace(EN_FOOTER_HEADPHONES_REGEX,EN_TO_ES_FOOTER_HEADPHONES);
+    result = result.replace(EN_FOOTER_WORK_SOLUTIONS_REGEX,EN_TO_ES_FOOTER_WORK_SOLUTIONS);
+    result = result.replace(EN_FOOTER_AUDIO_ENTHUSIASTS_REGEX,EN_TO_ES_FOOTER_AUDIO_ENTHUSIASTS);
+    result = en_to_es_footer_line_height(result);
     return result;
 }
 function en_to_de(text_input) { 
+    //footer
+    var result = text_input.replace(EN_FOOTER_CREATIVE_SAVER_REGEX,EN_TO_DE_FOOTER_CREATIVE_SAVER);
+    result = result.replace(EN_FOOTER_DELIVERY_METHODS_REGEX,EN_TO_DE_FOOTER_DELIVERY_METHODS)
+    result = result.replace(EN_FOOTER_COMMUNICATION_PARA_REGEX,EN_TO_DE_FOOTER_COMMUNICATION_PARA);
+    result = result.replace(EN_FOOTER_UNSUB_REGEX,EN_TO_DE_FOOTER_UNSUB);
+    result = result.replace(EN_FOOTER_PRIVACY_REGEX,EN_TO_DE_FOOTER_PRIVACY);
+    result = result.replace(EN_FOOTER_CONTACT_REGEX,EN_TO_DE_FOOTER_CONTACT);
+    result = result.replace(EN_FOOTER_COPYRIGHT_REGEX,EN_TO_DE_FOOTER_COPYRIGHT);
     //domain
-    var result = text_input.replace(EN_DOMAIN_REGEX,DE_DOMAIN);
+    result = result.replace(EN_DOMAIN_REGEX,DE_DOMAIN);
     //dollar
     result = result.replace(EN_DOLLAR_REGEX,EN_TO_ES_DE_FR_DOLLAR);
     //free shipping
@@ -312,11 +396,29 @@ function en_to_de(text_input) {
     result = result.replace(EN_BROWSER_VIEW_REGEX,EN_TO_DE_BROWSER_VIEW);
     //white
     result = result.replace(EN_WHITE_REGEX,EN_TO_DE_WHITE);
+    //header
+    result = result.replace(EN_HEADER_DISPLAY_REGEX,EN_TO_DE_HEADER_DISPLAY);
+    result = result.replace(EN_HEADER_FACEBOOK_REGEX,EN_TO_DE_HEADER_FACEBOOK);
+    //footer
+    result = result.replace(EN_FOOTER_EXPLORE_MORE_REGEX,EN_TO_DE_FOOTER_EXPLORE_MORE);
+    result = result.replace(EN_FOOTER_SPEAKERS_REGEX,EN_TO_DE_FOOTER_SPEAKERS);
+    result = result.replace(EN_FOOTER_HEADPHONES_REGEX,EN_TO_DE_FOOTER_HEADPHONES);
+    result = result.replace(EN_FOOTER_WORK_SOLUTIONS_REGEX,EN_TO_DE_FOOTER_WORK_SOLUTIONS);
+    result = result.replace(EN_FOOTER_AUDIO_ENTHUSIASTS_REGEX,EN_TO_DE_FOOTER_AUDIO_ENTHUSIASTS);
+    result = en_to_de_footer_line_height(result);
     return result;
 }
 function en_to_fr(text_input) { 
+    //footer
+    var result = text_input.replace(EN_FOOTER_CREATIVE_SAVER_REGEX,EN_TO_FR_FOOTER_CREATIVE_SAVER);
+    result = result.replace(EN_FOOTER_DELIVERY_METHODS_REGEX,EN_TO_FR_FOOTER_DELIVERY_METHODS)
+    result = result.replace(EN_FOOTER_COMMUNICATION_PARA_REGEX,EN_TO_FR_FOOTER_COMMUNICATION_PARA);
+    result = result.replace(EN_FOOTER_UNSUB_REGEX,EN_TO_FR_FOOTER_UNSUB);
+    result = result.replace(EN_FOOTER_PRIVACY_REGEX,EN_TO_FR_FOOTER_PRIVACY);
+    result = result.replace(EN_FOOTER_CONTACT_REGEX,EN_TO_FR_FOOTER_CONTACT);
+    result = result.replace(EN_FOOTER_COPYRIGHT_REGEX,EN_TO_FR_FOOTER_COPYRIGHT);
     //domain
-    var result = text_input.replace(EN_DOMAIN_REGEX,FR_DOMAIN);
+    result = result.replace(EN_DOMAIN_REGEX,FR_DOMAIN);
     //dollar
     result = result.replace(EN_DOLLAR_REGEX,EN_TO_ES_DE_FR_DOLLAR);
     //free shipping
@@ -338,11 +440,29 @@ function en_to_fr(text_input) {
     result = result.replace(EN_BROWSER_VIEW_REGEX,EN_TO_FR_BROWSER_VIEW);
     //white
     result = result.replace(EN_WHITE_REGEX,EN_TO_FR_WHITE);
+    //header
+    result = result.replace(EN_HEADER_DISPLAY_REGEX,EN_TO_FR_HEADER_DISPLAY);
+    result = result.replace(EN_HEADER_FACEBOOK_REGEX,EN_TO_FR_HEADER_FACEBOOK);
+    //footer
+    result = result.replace(EN_FOOTER_EXPLORE_MORE_REGEX,EN_TO_FR_FOOTER_EXPLORE_MORE);
+    result = result.replace(EN_FOOTER_SPEAKERS_REGEX,EN_TO_FR_FOOTER_SPEAKERS);
+    result = result.replace(EN_FOOTER_HEADPHONES_REGEX,EN_TO_FR_FOOTER_HEADPHONES);
+    result = result.replace(EN_FOOTER_WORK_SOLUTIONS_REGEX,EN_TO_FR_FOOTER_WORK_SOLUTIONS);
+    result = result.replace(EN_FOOTER_AUDIO_ENTHUSIASTS_REGEX,EN_TO_FR_FOOTER_AUDIO_ENTHUSIASTS);
+    result = en_to_fr_footer_line_height(result);
     return result;
 }
 function en_to_pl(text_input) { 
+    //footer
+    var result = text_input.replace(EN_FOOTER_CREATIVE_SAVER_REGEX,EN_TO_PL_FOOTER_CREATIVE_SAVER);
+    result = result.replace(EN_FOOTER_DELIVERY_METHODS_REGEX,EN_TO_PL_FOOTER_DELIVERY_METHODS)
+    result = result.replace(EN_FOOTER_COMMUNICATION_PARA_REGEX,EN_TO_PL_FOOTER_COMMUNICATION_PARA);
+    result = result.replace(EN_FOOTER_UNSUB_REGEX,EN_TO_PL_FOOTER_UNSUB);
+    result = result.replace(EN_FOOTER_PRIVACY_REGEX,EN_TO_PL_FOOTER_PRIVACY);
+    result = result.replace(EN_FOOTER_CONTACT_REGEX,EN_TO_PL_FOOTER_CONTACT);
+    result = result.replace(EN_FOOTER_COPYRIGHT_REGEX,EN_TO_PL_FOOTER_COPYRIGHT);
     //domain
-    var result = text_input.replace(EN_DOMAIN_REGEX,PL_DOMAIN);
+    result = result.replace(EN_DOMAIN_REGEX,PL_DOMAIN);
     //dollar
     result = result.replace(EN_DOLLAR_REGEX,EN_TO_PL_DOLLAR);
     //free shipping
@@ -364,6 +484,16 @@ function en_to_pl(text_input) {
     result = result.replace(EN_BROWSER_VIEW_REGEX,EN_TO_PL_BROWSER_VIEW);
     //white
     result = result.replace(EN_WHITE_REGEX,EN_TO_PL_WHITE);
+    //header
+    result = result.replace(EN_HEADER_DISPLAY_REGEX,EN_TO_PL_HEADER_DISPLAY);
+    result = result.replace(EN_HEADER_FACEBOOK_REGEX,EN_TO_PL_HEADER_FACEBOOK);
+    //footer
+    result = result.replace(EN_FOOTER_EXPLORE_MORE_REGEX,EN_TO_PL_FOOTER_EXPLORE_MORE);
+    result = result.replace(EN_FOOTER_SPEAKERS_REGEX,EN_TO_PL_FOOTER_SPEAKERS);
+    result = result.replace(EN_FOOTER_HEADPHONES_REGEX,EN_TO_PL_FOOTER_HEADPHONES);
+    result = result.replace(EN_FOOTER_WORK_SOLUTIONS_REGEX,EN_TO_PL_FOOTER_WORK_SOLUTIONS);
+    result = result.replace(EN_FOOTER_AUDIO_ENTHUSIASTS_REGEX,EN_TO_PL_FOOTER_AUDIO_ENTHUSIASTS);
+    result = en_to_pl_footer_line_height(result);
     return result;
 }
 // populates output text field
