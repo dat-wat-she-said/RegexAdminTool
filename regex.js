@@ -95,27 +95,33 @@ const EN_TO_PL_WHITE = "(BIAŁY)";
 // HEADER DISPLAY
 const EN_HEADER_DISPLAY_REGEX = new RegExp("If this email does not display correctly(.*)view its full version","ig");
 const EN_TO_IT_HEADER_DISPLAY = "Se non riesci a visualizzare correttamente questa email$1seleziona la versione completa";
+const EN_TO_DE_HEADER_DISPLAY = "Wenn diese E-mail nicht korrekt angezeigt wird$1wechseln Sie die Ansicht zur Vollversion";
 // FOOTER
 // FOOTER EXPLORE MORE
 const EN_FOOTER_EXPLORE_MORE_REGEX = new RegExp("EXPLORE MORE","ig");
 const EN_TO_IT_FOOTER_EXPLORE_MORE = "SCOPRI DI PIÙ SU";
+const EN_TO_DE_FOOTER_EXPLORE_MORE = "MEHR ERFAHREN";
 // FOOTER SPEAKERS
 const EN_FOOTER_SPEAKERS_REGEX = new RegExp("SPEAKERS(?=\b|<)","ig");
 const EN_TO_IT_FOOTER_SPEAKERS = "ALTOPARLANTI";
+const EN_TO_DE_FOOTER_SPEAKERS = "LAUTSPRECHER";
 // FOOTER HEADPHONES
 const EN_FOOTER_HEADPHONES_REGEX = new RegExp("HEADPHONES(?=<)(.*?\\|)","ig");
 const EN_TO_IT_FOOTER_HEADPHONES = "CUFFIE$1&nbsp;<br class='esd-mobile-hidden'>";
+const EN_TO_DE_FOOTER_HEADPHONES = "KOPFHÖRER$1&nbsp;<br class='esd-mobile-hidden'>";
 // FOOTER WORK SOLUTIONS
 const EN_FOOTER_WORK_SOLUTIONS_REGEX = new RegExp("WORK SOLUTIONS(?=\b|<)","ig");
 const EN_TO_IT_FOOTER_WORK_SOLUTIONS = "SOLUZIONI LAVORATIVE";
+const EN_TO_DE_FOOTER_WORK_SOLUTIONS = "FÜR DIE ARBEIT";
 // FOOTER AUDIO ENTHUSIASTS
 const EN_FOOTER_AUDIO_ENTHUSIASTS_REGEX = new RegExp("AUDIO ENTHUSIASTS(?=\b|<)","ig");
 const EN_TO_IT_FOOTER_AUDIO_ENTHUSIASTS = "APPASSIONATI DI AUDIO";
-
+const EN_TO_DE_FOOTER_AUDIO_ENTHUSIASTS = "AUDIO-ENTHUSIASTEN";
 // FOOTER CREATIVE SAVER SHIPPING
 const EN_FOOTER_DELIVERY_METHODS_REGEX = new RegExp("https://en.creative.com/help/delivery#what-are-the-shipping-methods-available","ig");
 const EN_FOOTER_CREATIVE_SAVER_REGEX = new RegExp("Free Creative Saver Shipping on orders over EUR 79.00.","ig");
 const EN_TO_IT_FOOTER_DELIVERY_METHODS = "https://it.creative.com/help/consegna#quali-sono-i-metodi-di-spedizione-disponibili-e-come-posso-usufruire-della-spedizione-gratuita";
+const EN_TO_DE_FOOTER_DELIVERY_METHODS = "https://de.creative.com/help/lieferung#welche-versandmethoden-stehen-zur-auswahl-und-wie-nehme-ich-kostenlosen-versand-in-anspruch";
 const EN_TO_IT_FOOTER_CREATIVE_SAVER = "Consegna gratuita per ordini di importo superiore a €79,00.";
 // FOOTER COMMUNICATION PARAGRAPH
 const EN_FOOTER_COMMUNICATION_PARA_REGEX = new RegExp("This communication was sent to you as a Creative subscriber.<br>You are subscribed as: {{UserAttribute\\['Email']}}.<br>To ensure delivery of future emails, please add info@mailers.europe.creative.com to your address book.","ig");
