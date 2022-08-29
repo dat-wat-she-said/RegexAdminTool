@@ -1,5 +1,7 @@
 # RegexAdminTool
 
+See the [product](https://benjaminchun.github.io/RegexAdminTool/)
+
 ## Background
 Localisation task seems to be quite a chore and very manual where we use the UI provided by Stripo
 We could do away with the manual clicks and run a script to perform manual and repetitive tasks with a script using API calls to retrieve html code.
