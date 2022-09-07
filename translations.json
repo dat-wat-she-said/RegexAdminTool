@@ -1,0 +1,50 @@
+{
+    "EN": [
+        {
+            "domain_regex":"en.creative.com",
+            "dollar_regex":"(&euro;|€)(\\w*)[.]?(\\w*)",
+            "free_shipping_regex":"FREE SHIPPING",
+            "shop_now_buy_now_regex":"(SHOP NOW|BUY NOW)",
+            "shop_now_regex":"SHOP NOW",
+            "buy_now_regex":"BUY NOW",
+            "learn_more_regex":"LEARN MORE",
+            "new_regex":"NEW\\b",
+            "free_worth_regex":"FREE(.*?)worth",
+            "free_regex":"FREE\\b",
+            "promo_code_regex":"(/help/)ordering(.*?)#i-have-a-promo-code-how-do-i-redeem",
+            "browser_view_regex":"((alt|title)(.*?))VIEW ALL DEALS\\s*>\\s*",
+            "white_regex":"\\(WHITE\\)",
+            "header_display_regex":"If this email does not display correctly(.*)view its full version",
+            "footer_explore_more_regex":"EXPLORE MORE",
+            "footer_speakers_regex":"SPEAKERS(?=\b|<)",
+            "footer_headphones_regex":"HEADPHONES(?=<)(.*?\\|)",
+            "footer_work_solutions_regex":"WORK SOLUTIONS(?=\b|<)",
+            "footer_audio_enthusiasts_regex":"AUDIO ENTHUSIASTS(?=\b|<)",
+            "footer_delivery_methods_regex":"https://en.creative.com/help/delivery#what-are-the-shipping-methods-available",
+            "footer_creative_saver_regex":"Free Creative Saver Shipping on orders over EUR 79.00.",
+            "footer_communication_para_regex":"This communication was sent to you as a Creative subscriber.<br>You are subscribed as: {{UserAttribute\\['Email']}}.<br>To ensure delivery of future emails, please add info@mailers.europe.creative.com to your address book.",
+            "footer_unsub_regex":"Unsubscribe",
+            "footer_copyright_regex":"Copyright © 2022. All rights reserved Creative Labs \\(Europe\\) Limited, Reg No: 580841<br>Unit Q2, North Ring Business Park, Santry, Dublin, D09 EV70, Ireland<br>Savings based on price of full retail product.<br>Whilst Creative endeavours to keep the information up-to-date and accurate Creative makes no representations or warranties of any kind, express or implied about the completeness, accuracy, reliability, suitability or availability with respect to the information, products, services or offers contained in this email for any purpose. The price and availability of products, services and offers are country specific and subject to change without prior notice.",
+            "header_facebook_regex":"https://www.facebook.com/CreativeLabs"
+        }
+    ],
+    "IT":[
+        {
+            "domain":"it.creative.com",
+            "dollar":"$1$2,$3",
+            "free_shipping":"SPEDIZIONE GRATUITA",
+            "shop_now_buy_now":"ACQUISTA ORA",
+            "learn_more":"PER SAPERNE DI PI&Ugrave;",
+            "new":"NUOVO",
+            "free_worth":"GRATIS il$1dal valore di",
+            "free":"GRATUITO",
+            "promo_code":"$1ordine$2#ho-un-codice-promozionale-come-posso",
+            "browser_view":"$1VISUALIZZA TUTTE LE OFFERTE>",
+            "white":"(BIANCO)",
+            "header_display":"Se non riesci a visualizzare correttamente questa email$1seleziona la versione completa",
+            
+        }
+    ],
+    "lastName": "Doe",
+    "Online": true
+}
