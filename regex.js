@@ -1,6 +1,6 @@
 // Made 2 changes from chee koon and ricson's edition as of 24/8/22
 // 1. change the rules regarding free and new
-// 2. did not include rules that seemed irrelevant
+// 2. added header and footer rules
 
 // -------global definitions------- 
 // DOMAIN
