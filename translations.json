@@ -42,7 +42,13 @@
             "browser_view":"$1VISUALIZZA TUTTE LE OFFERTE>",
             "white":"(BIANCO)",
             "header_display":"Se non riesci a visualizzare correttamente questa email$1seleziona la versione completa",
-            
+            "footer_explore_more":"SCOPRI DI PIÙ SU",
+            "footer_speakers":"ALTOPARLANTI",
+            "footer_headphones":"CUFFIE$1&nbsp;<br class='esd-mobile-hidden'>",
+            "footer_work_solutions":"SOLUZIONI LAVORATIVE",
+            "footer_audio_enthusiasts":"APPASSIONATI DI AUDIO",
+            "footer_delivery_methods":"https://it.creative.com/help/consegna#quali-sono-i-metodi-di-spedizione-disponibili-e-come-posso-usufruire-della-spedizione-gratuita",
+            "footer_creative_saver":"Consegna gratuita per ordini di importo superiore a €79,00."
         }
     ],
     "lastName": "Doe",
