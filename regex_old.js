@@ -182,6 +182,14 @@ const EN_TO_DE_FOOTER_COPYRIGHT = "Copyright © 2022. Alle Rechte vorbehalten. C
 const EN_TO_ES_FOOTER_COPYRIGHT = "Copyright © 2022. Todos los derechos reservados Creative Labs (Europe) Limited, n.º de reg.: 580841<br>Unit Q2, North Ring Business Park, Santry, Dublin, D09 EV70, Ireland<br>Ahorro basado en el precio total del producto.<br>Aunque Creative adopta todas las medidas razonables para mantener la precisión y actualidad de la información, Creative no se responsabiliza ni ofrece garantías de ningún tipo, expresas ni implícitas, de la integridad, precisión, fiabilidad, adecuación ni disponibilidad en relación con la información, productos, servicios u ofertas incluidos en este mensaje de correo electrónico en caso alguno. El precio y la disponibilidad de los productos, servicios y ofertas pueden variar en función del país y están sujetos a modificaciones sin previo aviso."
 const EN_TO_FR_FOOTER_COPYRIGHT = "Copyright © 2022. Tous droits réservés Creative Labs (Europe) Limited, Reg No: 580841<br>Unit Q2, North Ring Business Park, Santry, Dublin, D09 EV70, Ireland.<br>Réductions sur la base du prix du produit vendu au détail.<br>Bien que nous nous efforcions de fournir toujours des informations à jour et exactes, Creative exclut toute représentation ou garantie, expresse ou implicite, quant à l'exhaustivité, l'exactitude, la fiabilité, la pertinence ou la disponibilité des informations, produits, services ou offres contenus dans ce courrier électronique pour quelque but que ce soit. Le prix et la disponibilité des produits, des services et des offres sont spécifiques à chaque pays et susceptibles d'être modifiés sans avis préalable."
 const EN_TO_PL_FOOTER_COPYRIGHT = "Copyright © 2022. Wszelkie prawa zastrzezone, Creative Labs (Europe) Ltd, Nr rej.: Ireland 580841<br>Unit Q2, North Ring Business Park, Santry, Dublin, D09 EV70, Ireland.<br>Rabaty obliczone na podstawie pelnej ceny sklepowej produktu.<br>Firma Creative doklada wszelkich staran, aby prezentowane informacje byly aktualne. Firma Creative nie gwarantuje jednak w zaden sposób, jawny badz dorozumiany, kompletnosci, dokladnosci, aktualnosci, przydatnosci lub dostepnosci wzgledem informacji, produktów, uslug i ofert zawartych w niniejszej wiadomosci e-mail. Ceny i dostepnosc produktów, uslug i ofert zaleza od kraju i moga ulec zmianie bez powiadomienia."
+// HEADER FOOTER FACEBOOK
+const EN_HEADER_FACEBOOK_REGEX = new RegExp("https://www.facebook.com/CreativeLabs","ig");
+const EN_TO_IT_HEADER_FACEBOOK = "https://www.facebook.com/creativeitalia";
+const EN_TO_DE_HEADER_FACEBOOK = "https://www.facebook.com/CreativeLabsDeutschland";
+const EN_TO_ES_HEADER_FACEBOOK = "https://www.facebook.com/CreativeEspana";
+const EN_TO_FR_HEADER_FACEBOOK = "https://www.facebook.com/CreativeFrance";
+const EN_TO_PL_HEADER_FACEBOOK = "https://www.facebook.com/CreativePolska";
+
 // FOOTER IT DE ES FR PL
 function en_to_it_footer_line_height(text_input) {
     return text_input.replace(/(<p style="font-size: 10px;font-family: verdana, geneva, sans-serif;">)(?=<a target="_blank" style="font-size: 10px; font-family: verdana, geneva, sans-serif; text-decoration: none; color: #333333;" href="https:\/\/it\.creative\.com\/sxfi\/">SUPER X-FI<\/a>)/,'<p style="font-size: 10px; line-height: 200%; font-family: verdana, geneva, sans-serif;">');
@@ -198,13 +206,7 @@ function en_to_fr_footer_line_height(text_input) {
 function en_to_pl_footer_line_height(text_input) {
     return text_input.replace(/(<p style="font-size: 10px;font-family: verdana, geneva, sans-serif;">)(?=<a target="_blank" style="font-size: 10px; font-family: verdana, geneva, sans-serif; text-decoration: none; color: #333333;" href="https:\/\/pl\.creative\.com\/sxfi\/">SUPER X-FI<\/a>)/,'<p style="font-size: 10px; line-height: 200%; font-family: verdana, geneva, sans-serif;">');
 }
-// HEADER FOOTER FACEBOOK
-const EN_HEADER_FACEBOOK_REGEX = new RegExp("https://www.facebook.com/CreativeLabs","ig");
-const EN_TO_IT_HEADER_FACEBOOK = "https://www.facebook.com/creativeitalia";
-const EN_TO_DE_HEADER_FACEBOOK = "https://www.facebook.com/CreativeLabsDeutschland";
-const EN_TO_ES_HEADER_FACEBOOK = "https://www.facebook.com/CreativeEspana";
-const EN_TO_FR_HEADER_FACEBOOK = "https://www.facebook.com/CreativeFrance";
-const EN_TO_PL_HEADER_FACEBOOK = "https://www.facebook.com/CreativePolska";
+
 // EUR TO GBP
 function eur_to_gbp(text_input){
     return text_input.replace(/EUR 79/gi,"GBP 79");
